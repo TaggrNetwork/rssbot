@@ -1,0 +1,25 @@
+{
+    "version": 1,
+    "canisters": {
+        "rssbot": {
+            "package": "rssbot",
+            "candid": "src/rssbot/rssbot.did",
+            "type": "custom",
+            "wasm": "target/wasm32-unknown-unknown/release/rssbot.wasm.gz",
+            "build": "./build.sh rssbot"
+        }
+    },
+    "defaults": {
+        "build": {
+            "packtool": "",
+            "args": ""
+        }
+    },
+    "networks": {
+        "local": {
+            "bind": "127.0.0.1:8000",
+            "type": "ephemeral"
+        }
+    },
+    "dfx": "0.24.3"
+}
